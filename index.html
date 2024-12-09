@@ -12,7 +12,7 @@
 
 <body>
     <!-- Nav bar here -->
-    <div class="sticky bg-[#a8a29e]">
+    <div class="sticky bg-[#a8a29e] h-32">
         <div class="navbar">
             <div class="navbar-start pl-4">
                 <button class="btn bg-[#bef264]">Blog</button>
@@ -32,6 +32,39 @@
             </div>
         </div>
     </div>
+
+    <main>
+        <!-- Toggle Buttons -->
+        <div class="my-16 mx-auto text-center">
+            <button class="btn bg-[#bef264] border-none text-black btn-primary">Donation</button>
+            <button class="btn bg-[#bef264] border-none text-black btn-primary">History</button>
+
+        </div>
+
+        <!-- cards -->
+        <div class="hero bg-base-100 min-h-screen">
+            <div class="hero-content flex-col lg:flex-row">
+                <img src="./assets/noakhali.png" class="w-fit rounded-lg shadow-2xl" />
+                <div>
+                    <button class="btn btn-active"><img src="./assets/coin.png" alt="">
+                        <div class="pl-2">0</div>
+                        <div class="pl-2">
+                            <p>BDT</p>
+                    </button>
+                    <h1 class="text-3xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="py-6">
+                        The recent floods in Noakhali have caused significant damage to homes infrastructure. Your
+                        donation will help provide essential supplies and to those affected by this disaster. Every
+                        contribution, big or small, makes difference. Please join us in supporting the relief efforts
+                        and making a positive impact on the lives of those in need.
+                    </p>
+                    <input class="border-2 w-full border-black h-10 rounded-md" placeholder="Write Donation Amount"
+                        type="number"><br> <br>
+                    <button class="btn btn-primary w-full">Donate Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
