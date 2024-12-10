@@ -50,7 +50,7 @@
                     <div class="flex flex-col gap-4">
                         <div>
                             <button class="btn btn-active"><img src="./assets/coin.png" alt="">
-                                <div class="pl-2">0</div>
+                                <div id="new-amount" class="pl-2">0</div>
                                 <div class="pl-2">
                                     <p>BDT</p>
                             </button>
@@ -70,9 +70,10 @@
                             </p>
                         </div>
                         <div>
-                            <input class="border-2 w-full border-black h-10 rounded-md"
+                            <input id="donation-amount" class="border-2  w-full border-black h-10 rounded-md"
                                 placeholder="Write Donation Amount" type="number"><br> <br>
-                            <button class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
+                            <button id="btn-donate-now"
+                                class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
                                 Now</button>
                         </div>
                     </div>
@@ -152,6 +153,8 @@
 
         </div>
     </main>
+    <script src="./js/app.js"></script>
+    <script src="./js/utilites.js"></script>
 </body>
 
 </html>
