@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 py-10">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <h1 class="text-2xl font-bold mb-6">Dom Related Questions</h1>
+
+        <!-- Accordion -->
+        <div class="accordion space-y-4">
+            <!-- Question 1 -->
+            <div class="accordion-item border-b">
+                <button class="accordion-header flex justify-between items-center w-full py-3 text-left">
+                    <span class="font-medium">What is the Document Object Model (DOM)?</span>
+                    <span class="arrow text-xl transform transition-transform">&darr;</span>
+                </button>
+                <div class="accordion-content hidden pl-4 text-gray-700">
+                    The DOM is a programming interface for web documents. It represents the structure of a document as a
+                    tree of objects that can be manipulated using programming languages like JavaScript.
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item border-b">
+                <button class="accordion-header flex justify-between items-center w-full py-3 text-left">
+                    <span class="font-medium">How do you select an element from the DOM?</span>
+                    <span class="arrow text-xl transform transition-transform">&darr;</span>
+                </button>
+                <div class="accordion-content hidden pl-4 text-gray-700">
+                    You can select an element using methods like <code>document.getElementById</code>,
+                    <code>document.querySelector</code>,
+                    or <code>document.getElementsByClassName</code>.
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item border-b">
+                <button class="accordion-header flex justify-between items-center w-full py-3 text-left">
+                    <span class="font-medium">What is event delegation in the context of the DOM, and why is it
+                        useful?</span>
+                    <span class="arrow text-xl transform transition-transform">&darr;</span>
+                </button>
+                <div class="accordion-content hidden pl-4 text-gray-700">
+                    Event delegation is a technique where you attach a single event listener to a parent element to
+                    manage events for its child elements.
+                    It's useful for improving performance and handling dynamic content.
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item border-b">
+                <button class="accordion-header flex justify-between items-center w-full py-3 text-left">
+                    <span class="font-medium">How do you manipulate an element's attributes and styles using the
+                        DOM?</span>
+                    <span class="arrow text-xl transform transition-transform">&darr;</span>
+                </button>
+                <div class="accordion-content hidden pl-4 text-gray-700">
+                    You can manipulate attributes using <code>setAttribute</code>, <code>getAttribute</code>, or by
+                    directly setting properties.
+                    Styles can be manipulated using the <code>style</code> property or CSS classes.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Accordion functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordions = document.querySelectorAll('.accordion-item');
+
+            accordions.forEach(function (item) {
+                const header = item.querySelector('.accordion-header');
+                const content = item.querySelector('.accordion-content');
+                const arrow = item.querySelector('.arrow');
+
+                header.addEventListener('click', function () {
+                    const isVisible = !content.classList.contains('hidden');
+
+                    // Toggle visibility
+                    content.classList.toggle('hidden');
+                    arrow.classList.toggle('rotate-180', isVisible); // Rotate arrow
+
+                    // Close other accordions
+                    accordions.forEach(function (otherItem) {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.accordion-content').classList.add('hidden');
+                            otherItem.querySelector('.arrow').classList.remove('rotate-180');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

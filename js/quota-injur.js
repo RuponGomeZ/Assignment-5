@@ -17,29 +17,8 @@ const btnDonateQuota = document.getElementById('btn-donate-now-qt').addEventList
         document.getElementById('current-balance').innerText = currentBalanceInt - donationNowAmountNumber;
 
         document.getElementById('donation-field-qt').value = '';
-
-        const modal = document.getElementById('donation-modal');
-        const closeModalButton = document.getElementById('close-modal');
-
-
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-
-        const modalClose = document.getElementById('donation-modal').addEventListener('click', function () {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        })
-
     }
 
-
-
-
-    // // Close the modal when "Close Confirmation" is clicked
-    // closeModalButton.addEventListener('click', function () {
-    //     modal.classList.add('hidden');
-    //     modal.classList.remove('flex');
-    // });
 });
 
 

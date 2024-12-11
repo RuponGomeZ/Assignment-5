@@ -16,5 +16,8 @@ const btnDonateFeni = document.getElementById('btn-donate-now-fn').addEventListe
         document.getElementById('current-balance').innerText = currentBalanceInt - donationNowAmountNumber;
 
         document.getElementById('donation-field-fn').value = '';
+
     }
+
+
 });

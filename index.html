@@ -12,10 +12,10 @@
 
 <body>
     <!-- Nav bar here -->
-    <div class="sticky bg-[#a8a29e] h-32">
+    <div class="sticky top-0 z-50 bg-[#a8a29e] h-32">
         <div class="navbar">
             <div class="navbar-start pl-4">
-                <button class="btn bg-[#bef264]">Blog</button>
+                <button class="btn bg-[#bef264]"><a href="./blog.html">Blog</a></button>
             </div>
             <div class="navbar-center">
                 <a class="btn btn-ghost text-xl">
@@ -88,7 +88,7 @@
                         <div>
                             <input id="donation-field-nk" class="border-2  w-full border-black h-10 rounded-md"
                                 placeholder="Write Donation Amount" type="number"><br> <br>
-                            <button id="btn-donate-now-nk"
+                            <button onclick="showModal()" id="btn-donate-now-nk"
                                 class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
                                 Now</button>
                         </div>
@@ -124,7 +124,7 @@
                         <div>
                             <input id="donation-field-fn" class="border-2 w-full border-black h-10 rounded-md"
                                 placeholder="Write Donation Amount" type="number"><br> <br>
-                            <button id="btn-donate-now-fn"
+                            <button onclick="showModal()" id="btn-donate-now-fn"
                                 class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
                                 Now</button>
                         </div>
@@ -161,7 +161,7 @@
                         <div>
                             <input id="donation-field-qt" class="border-2 w-full border-black h-10 rounded-md"
                                 placeholder="Write Donation Amount" type="number"><br> <br>
-                            <button id="btn-donate-now-qt"
+                            <button onclick="showModal()" id="btn-donate-now-qt"
                                 class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
                                 Now</button>
                         </div>
