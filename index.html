@@ -36,17 +36,22 @@
     <main>
         <!-- Toggle Buttons -->
         <div class="my-16 mx-auto text-center">
-            <button class="btn bg-[#bef264] border-none text-black btn-primary">Donation</button>
-            <button class="btn bg-[#bef264] border-none text-black btn-primary">History</button>
+            <button onclick="hideHistoryTab()" id="btn-donation"
+                class="btn bg-[#bef264] border-black text-black btn-primary">Donation</button>
+            <button onclick="hideDonationTab()" id="btn-history"
+                class="btn bg-[white] border-black text-black btn-primary">History</button>
 
         </div>
 
 
         <!-- History Section -->
-        <div onclick="hideDonationTab()" id="history-section" class="hidden">
+        <div id="history-section">
             <div class="w-10/12 mx-auto">
-                <div id="history-container" class="flex flex-col gap-y-3">
+                <div id="history-container" class="flex  flex-col gap-y-3">
                     <!-- Donation history will be appended here -->
+
+
+
                 </div>
             </div>
         </div>
