@@ -41,8 +41,19 @@
 
         </div>
 
+
+        <!-- History Section -->
+        <div onclick="hideDonationTab()" id="history-section" class="hidden">
+            <div class="w-10/12 mx-auto">
+                <div id="history-container" class="flex flex-col gap-y-3">
+                    <!-- Donation history will be appended here -->
+                </div>
+            </div>
+        </div>
+
+
         <!-- cards -->
-        <div class="flex flex-col gap-y-3 items-center">
+        <div id="donation-tab" class="flex flex-col gap-y-3 items-center">
             <!-- card Noakhali -->
             <div class="hero bg-base-100 border-solid  rounded-lg border-2 m-0 p-0 space-y-0 h-auto w-8/12">
                 <div class="hero-content flex-col lg:flex-row">
@@ -50,7 +61,7 @@
                     <div class="flex flex-col gap-4">
                         <div>
                             <button class="btn btn-active"><img src="./assets/coin.png" alt="">
-                                <div id="donation-amount" class="pl-2">0</div>
+                                <div id="donation-amount-nk" class="pl-2">0</div>
                                 <div class="pl-2">
                                     <p>BDT</p>
                             </button>
@@ -70,9 +81,9 @@
                             </p>
                         </div>
                         <div>
-                            <input id="donation-field" class="border-2  w-full border-black h-10 rounded-md"
+                            <input id="donation-field-nk" class="border-2  w-full border-black h-10 rounded-md"
                                 placeholder="Write Donation Amount" type="number"><br> <br>
-                            <button id="btn-donate-now"
+                            <button id="btn-donate-now-nk"
                                 class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
                                 Now</button>
                         </div>
@@ -87,7 +98,7 @@
                     <div class="flex flex-col gap-6">
                         <div>
                             <button class="btn btn-active"><img src="./assets/coin.png" alt="">
-                                <div id="donation-amount" class="pl-2">0</div>
+                                <div id="donation-amount-fn" class="pl-2">0</div>
                                 <div class="pl-2">
                                     <p>BDT</p>
                             </button>
@@ -106,9 +117,9 @@
                             </p>
                         </div>
                         <div>
-                            <input class="border-2 w-full border-black h-10 rounded-md"
+                            <input id="donation-field-fn" class="border-2 w-full border-black h-10 rounded-md"
                                 placeholder="Write Donation Amount" type="number"><br> <br>
-                            <button id="btn-donate-now"
+                            <button id="btn-donate-now-fn"
                                 class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
                                 Now</button>
                         </div>
@@ -123,7 +134,7 @@
                     <div class="flex flex-col  gap-6">
                         <div>
                             <button class="btn btn-active"><img src="./assets/coin.png" alt="">
-                                <div class="pl-2">0</div>
+                                <div id="donation-amount-qt" class="pl-2">0</div>
                                 <div class="pl-2">
                                     <p>BDT</p>
                             </button>
@@ -143,9 +154,10 @@
                             </p>
                         </div>
                         <div>
-                            <input class="border-2 w-full border-black h-10 rounded-md"
+                            <input id="donation-field-qt" class="border-2 w-full border-black h-10 rounded-md"
                                 placeholder="Write Donation Amount" type="number"><br> <br>
-                            <button class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
+                            <button id="btn-donate-now-qt"
+                                class="btn bg-[#bef264] border-none text-black btn-primary w-full">Donate
                                 Now</button>
                         </div>
                     </div>
@@ -154,10 +166,29 @@
 
         </div>
     </main>
+
+    <!-- modal -->
+
+    <div id="donation-modal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-6 shadow-lg max-w-sm w-full text-center">
+            <h2 class="text-2xl font-bold mb-4">Congrats!</h2>
+            <img src="./assets/coin.png" alt="coin" class="w-16 mx-auto mb-4">
+            <p>You Have Donated for Humankind</p>
+            <p class="text-lg font-semibold mt-2">Successfully</p>
+            <button id="close-modal"
+                class="mt-6 bg-[#bef264] text-black border-none px-4 py-2 rounded-md hover:bg-[#a8d653]">
+                Close Confirmation
+            </button>
+        </div>
+    </div>
+
+    <!-- modal -->
+
     <script src="./js/utilites.js"></script>
     <script src="./js/noakhali.js"></script>
     <script src="./js/feni.js"></script>
     <script src="./js/quota-injur.js"></script>
+    <script src="./js/history.js"></script>
 </body>
 
 </html>
